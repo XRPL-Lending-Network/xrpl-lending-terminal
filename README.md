@@ -148,6 +148,12 @@ It **is not**:
 - [XLS-66: Lending Protocol](https://github.com/XRPLF/XRPL-Standards/tree/master/XLS-0066-lending-protocol)
 - [XRPL Lending Network](https://github.com/XRPL-Lending-Network)
 
+## Contributing
+
+Corrections to the documentation and example data are welcome. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for what fits this repository and how the
+example data is kept synthetic.
+
 ## Security
 
 Please report security issues as described in [SECURITY.md](SECURITY.md).
