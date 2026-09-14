@@ -1,0 +1,53 @@
+{
+  "_comment": "Illustrative example. Addresses, hashes and amounts are not real. The ledger section shows the general shape of the ledger entry; the terminal section shows the public Terminal view, with direct ledger data and Terminal-derived metrics kept apart.",
+  "ledger": {
+    "Account": "rVaultPseudoAccountExampleXXXXXXXX",
+    "Asset": {
+      "currency": "USD",
+      "issuer": "rAssetIssuerExampleXXXXXXXXXXXXXXX"
+    },
+    "AssetsAvailable": "410000",
+    "AssetsMaximum": "5000000",
+    "AssetsTotal": "1250000",
+    "Data": "4578616D706C65207661756C74",
+    "Flags": 0,
+    "LedgerEntryType": "Vault",
+    "Owner": "rVaultOwnerExampleXXXXXXXXXXXXXXXX",
+    "OwnerNode": "0",
+    "PreviousTxnID": "0000000000000000000000000000000000000000000000000000000000000000",
+    "PreviousTxnLgrSeq": 1000000,
+    "Scale": 6,
+    "Sequence": 100001,
+    "ShareMPTID": "00000001A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1",
+    "WithdrawalPolicy": 1,
+    "index": "6E0B3C4D8A7F1E2B9C5D4A3F2E1D0C9B8A7F6E5D4C3B2A1F0E9D8C7B6A5F4E3D"
+  },
+  "terminal": {
+    "entity": "vault",
+    "vault_id": "6E0B3C4D8A7F1E2B9C5D4A3F2E1D0C9B8A7F6E5D4C3B2A1F0E9D8C7B6A5F4E3D",
+    "network": "lending-devnet",
+    "as_of_ledger": 1000000,
+    "owner": "rVaultOwnerExampleXXXXXXXXXXXXXXXX",
+    "pseudo_account": "rVaultPseudoAccountExampleXXXXXXXX",
+    "asset": {
+      "type": "iou",
+      "currency": "USD",
+      "issuer": "rAssetIssuerExampleXXXXXXXXXXXXXXX"
+    },
+    "private": false,
+    "withdrawal_policy": "first_come_first_serve",
+    "share_token": "00000001A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1",
+    "metadata": "Example vault",
+    "direct": {
+      "assets_total": "1250000",
+      "assets_available": "410000",
+      "assets_maximum": "5000000",
+      "loss_unrealized": "0"
+    },
+    "derived": {
+      "assets_deployed": "840000",
+      "utilization": "0.672",
+      "deposit_capacity_remaining": "3750000"
+    }
+  }
+}

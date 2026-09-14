@@ -1,0 +1,55 @@
+{
+  "_comment": "Illustrative example. Addresses, hashes and amounts are not real. The ledger section shows the general shape of the ledger entry; the terminal section shows the public Terminal view, with direct ledger data and Terminal-derived metrics kept apart.",
+  "ledger": {
+    "Account": "rBrokerPseudoAccountExampleXXXXXXX",
+    "CoverAvailable": "60000",
+    "CoverRateLiquidation": 20000,
+    "CoverRateMinimum": 10000,
+    "Data": "4578616D706C652062726F6B6572",
+    "DebtMaximum": "1000000",
+    "DebtTotal": "520000",
+    "Flags": 0,
+    "LedgerEntryType": "LoanBroker",
+    "LoanSequence": 7,
+    "ManagementFeeRate": 500,
+    "Owner": "rBrokerOwnerExampleXXXXXXXXXXXXXXX",
+    "OwnerCount": 3,
+    "OwnerNode": "0",
+    "PreviousTxnID": "0000000000000000000000000000000000000000000000000000000000000000",
+    "PreviousTxnLgrSeq": 1000000,
+    "Sequence": 100010,
+    "VaultID": "6E0B3C4D8A7F1E2B9C5D4A3F2E1D0C9B8A7F6E5D4C3B2A1F0E9D8C7B6A5F4E3D",
+    "VaultNode": "0",
+    "index": "9A8B7C6D5E4F3A2B1C0D9E8F7A6B5C4D3E2F1A0B9C8D7E6F5A4B3C2D1E0F9A8B"
+  },
+  "terminal": {
+    "entity": "loan_broker",
+    "loan_broker_id": "9A8B7C6D5E4F3A2B1C0D9E8F7A6B5C4D3E2F1A0B9C8D7E6F5A4B3C2D1E0F9A8B",
+    "vault_id": "6E0B3C4D8A7F1E2B9C5D4A3F2E1D0C9B8A7F6E5D4C3B2A1F0E9D8C7B6A5F4E3D",
+    "network": "lending-devnet",
+    "as_of_ledger": 1000000,
+    "owner": "rBrokerOwnerExampleXXXXXXXXXXXXXXX",
+    "pseudo_account": "rBrokerPseudoAccountExampleXXXXXXX",
+    "asset": {
+      "type": "iou",
+      "currency": "USD",
+      "issuer": "rAssetIssuerExampleXXXXXXXXXXXXXXX"
+    },
+    "metadata": "Example broker",
+    "direct": {
+      "debt_total": "520000",
+      "debt_maximum": "1000000",
+      "cover_available": "60000",
+      "cover_rate_minimum": "0.10",
+      "cover_rate_liquidation": "0.20",
+      "management_fee_rate": "0.005",
+      "loan_count": 3
+    },
+    "derived": {
+      "cover_ratio": "0.115384615384615385",
+      "cover_required": "52000",
+      "cover_sufficient": true,
+      "debt_headroom": "480000"
+    }
+  }
+}

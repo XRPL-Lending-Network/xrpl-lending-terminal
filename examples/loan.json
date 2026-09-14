@@ -1,0 +1,77 @@
+{
+  "_comment": "Illustrative example. Addresses, hashes and amounts are not real. The ledger section shows the general shape of the ledger entry; the terminal section shows the public Terminal view, with direct ledger data and Terminal-derived metrics kept apart.",
+  "ledger": {
+    "Borrower": "rBorrowerExampleXXXXXXXXXXXXXXXXXX",
+    "Flags": 0,
+    "GracePeriod": 604800,
+    "InterestRate": 7000,
+    "LateInterestRate": 2000,
+    "LatePaymentFee": "100",
+    "LedgerEntryType": "Loan",
+    "LoanBrokerID": "9A8B7C6D5E4F3A2B1C0D9E8F7A6B5C4D3E2F1A0B9C8D7E6F5A4B3C2D1E0F9A8B",
+    "LoanBrokerNode": "0",
+    "LoanOriginationFee": "500",
+    "LoanScale": -8,
+    "LoanSequence": 5,
+    "LoanServiceFee": "10",
+    "ManagementFeeOutstanding": "315",
+    "NextPaymentDueDate": 847776000,
+    "OwnerNode": "0",
+    "PaymentInterval": 2592000,
+    "PaymentRemaining": 6,
+    "PeriodicPayment": "31050.4173920584912",
+    "PreviousPaymentDueDate": 845184000,
+    "PreviousTxnID": "0000000000000000000000000000000000000000000000000000000000000000",
+    "PreviousTxnLgrSeq": 1000000,
+    "PrincipalOutstanding": "180000",
+    "StartDate": 840000000,
+    "TotalValueOutstanding": "186302.504352350947",
+    "index": "1F2E3D4C5B6A79880F1E2D3C4B5A69780E1F2D3C4B5A69780E1F2D3C4B5A6978"
+  },
+  "terminal": {
+    "entity": "loan",
+    "loan_id": "1F2E3D4C5B6A79880F1E2D3C4B5A69780E1F2D3C4B5A69780E1F2D3C4B5A6978",
+    "loan_broker_id": "9A8B7C6D5E4F3A2B1C0D9E8F7A6B5C4D3E2F1A0B9C8D7E6F5A4B3C2D1E0F9A8B",
+    "vault_id": "6E0B3C4D8A7F1E2B9C5D4A3F2E1D0C9B8A7F6E5D4C3B2A1F0E9D8C7B6A5F4E3D",
+    "network": "lending-devnet",
+    "as_of_ledger": 1000000,
+    "borrower": "rBorrowerExampleXXXXXXXXXXXXXXXXXX",
+    "asset": {
+      "type": "iou",
+      "currency": "USD",
+      "issuer": "rAssetIssuerExampleXXXXXXXXXXXXXXX"
+    },
+    "terms": {
+      "interest_rate": "0.070",
+      "late_interest_rate": "0.020",
+      "close_interest_rate": "0",
+      "overpayment_interest_rate": "0",
+      "origination_fee": "500",
+      "service_fee": "10",
+      "late_payment_fee": "100",
+      "close_payment_fee": "0",
+      "overpayment_fee_rate": "0",
+      "overpayment_allowed": false,
+      "payment_interval_seconds": 2592000,
+      "grace_period_seconds": 604800,
+      "start_date": "2026-08-14T05:20:00Z"
+    },
+    "direct": {
+      "principal_outstanding": "180000",
+      "total_value_outstanding": "186302.504352350947",
+      "management_fee_outstanding": "315",
+      "periodic_payment": "31050.4173920584912",
+      "previous_payment_due_date": "2026-10-13T05:20:00Z",
+      "next_payment_due_date": "2026-11-12T05:20:00Z",
+      "payments_remaining": 6,
+      "impaired": false,
+      "defaulted": false
+    },
+    "derived": {
+      "status": "active",
+      "overdue": false,
+      "default_eligible_after": "2026-11-19T05:20:00Z"
+    },
+    "as_of_close_time": "2026-11-01T00:00:00Z"
+  }
+}
