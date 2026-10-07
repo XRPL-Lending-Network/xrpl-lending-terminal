@@ -29,6 +29,9 @@ pseudo-account.
 | `Owner` | Account that created and controls the vault |
 | `Account` | Vault pseudo-account that holds the assets and issues shares |
 | `Asset` | The vault's single asset |
+| `VaultKind` | Vault lifecycle kind: absent or `0` means open-ended; `1` means closed-ended |
+| `SubscriptionDate` | For a closed-ended vault, the final second of the Subscription phase, expressed in seconds since the Ripple epoch |
+| `RedemptionDate` | For a closed-ended vault, the first second of the Redemption phase, expressed in seconds since the Ripple epoch |
 | `AssetsTotal` | Total value of the vault, including assets currently lent out |
 | `AssetsAvailable` | Assets currently held and available for withdrawal |
 | `AssetsMaximum` | Deposit cap (0 means no cap) |
@@ -39,12 +42,22 @@ pseudo-account.
 | `Data` | Optional owner-supplied metadata (up to 256 bytes) |
 | `Flags` | `lsfVaultPrivate` marks a private, credential-gated vault |
 
+Closed-ended vaults require `SubscriptionDate` and `RedemptionDate`;
+open-ended vaults do not have these schedule fields. The lifecycle kind
+and schedule are immutable. `VaultKind` is a separate ledger field, not
+a bit in `Flags`.
+
 **Derived by the Terminal (examples)**
 
 - Assets deployed in loans
 - Utilization
 - Remaining deposit capacity
 - Change history of the above
+- Closed-ended vault lifecycle phase, derived from the vault schedule
+  and the parent ledger close time used by the protocol: Subscription
+  through `SubscriptionDate`, Investment strictly between
+  `SubscriptionDate` and `RedemptionDate`, and Redemption from
+  `RedemptionDate` onward. Open-ended vaults have no lifecycle phase.
 
 ### Loan Broker (XLS-66)
 
