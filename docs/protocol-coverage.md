@@ -14,12 +14,20 @@ Legend: **target** means part of the current development target. See
 | Feature | Ledger source | Terminal concept | Status |
 |---|---|---|---|
 | Vault state | `Vault` entry | Vault state, vault history | target |
+| Vault lifecycle kind | `VaultKind` | Open-ended / closed-ended vault classification | target |
+| Closed-ended schedule | `SubscriptionDate`, `RedemptionDate` | Subscription and redemption schedule | target |
+| Closed-ended lifecycle phase | `VaultKind`, `SubscriptionDate`, `RedemptionDate`, parent ledger close time | Derived Subscription / Investment / Redemption phase | target |
 | Vault creation and configuration | `VaultCreate`, `VaultSet`, `VaultDelete` | Vault lifecycle events | target |
 | Deposits and withdrawals | `VaultDeposit`, `VaultWithdraw` | Depositor activity, liquidity changes | target |
 | Issuer clawback | `VaultClawback` | Clawback events | target |
 | Share tokens | `ShareMPTID`, `MPTokenIssuance` | Share supply, share holders | target |
 | Private vaults | `lsfVaultPrivate`, permissioned domain on the share issuance | Vault access type | target |
 | Unrealized loss | `LossUnrealized` | Vault loss exposure | target |
+
+The lifecycle phase is derived from the closed-ended vault schedule and
+the parent ledger close time used by the protocol; it is not a stored
+ledger field. Open-ended vaults have no lifecycle phase. These rows describe
+target coverage and do not establish deployed Terminal support.
 
 ## Loan Brokers (XLS-66)
 
