@@ -1,18 +1,39 @@
 # Development Status
 
-_Last updated: 2026-09-07._
+_Lifecycle documentation updated: 2026-10-08._
 
 ## Network
 
-Development of the XRPL Lending Terminal currently targets the
-**XRPL Lending Devnet**, where the `SingleAssetVault` and `LendingProtocol`
-amendments are enabled.
+_Historical statements from the 2026-09-07 version of this document;
+network activation was not revalidated for this documentation update._
 
-The Lending Protocol is **not available on XRPL Mainnet** at the time of
-writing. Availability on Mainnet depends on the amendment process and is
-outside the control of XRPL Lending Network. Nothing in this repository should
-be read as a claim of Mainnet availability. The current amendment status can be
-checked on the [XRPL known amendments](https://xrpl.org/resources/known-amendments) page.
+The 2026-09-07 version described the development target as the
+**XRPL Lending Devnet**, with the `SingleAssetVault` and `LendingProtocol`
+amendments enabled. It also stated that the Lending Protocol was not
+available on XRPL Mainnet at that time.
+
+These historical statements do not establish current network availability
+or activation of `LendingProtocolV1_1`. Availability depends on the amendment
+process and is outside the control of XRPL Lending Network. Consult the
+[XRPL known amendments](https://xrpl.org/resources/known-amendments) page
+for amendment status and verify activation on the specific network before
+relying on a feature.
+
+## LendingProtocolV1_1 documentation scope
+
+[xrpld 3.4.0](https://xrpl.org/blog/2026/xrpld-3.4.0) introduced
+`LendingProtocolV1_1`, including closed-ended vault lifecycle support.
+Availability on a particular network depends on amendment activation.
+
+The public [data model](data-model.md) documents `VaultKind`,
+`SubscriptionDate`, `RedemptionDate`, and the lifecycle phase derived
+using the parent ledger close time. The corresponding entries in
+[protocol coverage](protocol-coverage.md) remain marked as `target`.
+
+This documentation update does not establish deployed Terminal support,
+complete `LendingProtocolV1_1` compatibility, or a complete accounting
+migration. Runtime coverage should be recorded here when it has been
+verified on the target network.
 
 ## Specification status
 
@@ -21,10 +42,13 @@ checked on the [XRPL known amendments](https://xrpl.org/resources/known-amendmen
 | [XLS-65 Single Asset Vault](https://github.com/XRPLF/XRPL-Standards/tree/master/XLS-0065-single-asset-vault) | Draft |
 | [XLS-66 Lending Protocol](https://github.com/XRPLF/XRPL-Standards/tree/master/XLS-0066-lending-protocol) | Draft |
 
-Because both specifications are Draft, ledger entry fields, flags, transaction
-types and their semantics **may change**. The Terminal is developed against
-the current implementation on the Lending Devnet, and this repository will be
-updated when the public data model changes as a result.
+The specification references used for this lifecycle documentation update
+are pinned to
+[XRPL-Standards revision 7b89b23](https://github.com/XRPLF/XRPL-Standards/tree/7b89b2368f245fdc4e5ff090b58625b13b081f52),
+where both specifications are Draft. Ledger entry fields, flags, transaction
+types, and their semantics may change. The Draft labels above refer to
+that revision. Future updates should check newer specification revisions
+and the implementation running on the target network.
 
 ## What is being built
 
