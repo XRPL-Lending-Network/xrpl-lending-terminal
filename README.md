@@ -24,6 +24,12 @@ capital and post first-loss cover, and Loans that record fixed-term credit
 agreements between a broker and a borrower. Every deposit, loan origination, repayment,
 impairment and default is a ledger transaction that updates these objects.
 
+Under `LendingProtocolV1_1`, closed-ended vaults have a fixed subscription
+and redemption schedule with three lifecycle phases: Subscription,
+Investment, and Redemption. The Terminal's target coverage includes this
+schedule and the derived lifecycle phase. See the
+[data model](docs/data-model.md) for the fields and phase boundaries.
+
 On its own, this is ledger state: individual objects, individual transactions,
 and per-account directories. The XRPL Lending Terminal turns that ledger-level
 information into structured lending market data:
@@ -71,7 +77,7 @@ they are implemented.
 The Terminal is being developed against the current XRPL Lending Protocol
 implementation. Target coverage:
 
-- **Single Asset Vaults** (XLS-65): vault state, deposits, withdrawals, clawbacks, share tokens
+- **Single Asset Vaults** (XLS-65): vault state, deposits, withdrawals, clawbacks, share tokens, and closed-ended vault schedules and lifecycle phases
 - **Loan Brokers** (XLS-66): broker configuration, debt tracking, management fees
 - **Loans** (XLS-66): loan terms, schedule, outstanding balances
 - **Loan repayments**: scheduled, late, early full and overpayments
